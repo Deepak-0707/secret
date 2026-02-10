@@ -7,7 +7,7 @@ pipeline {
                 withCredentials([
                     string(credentialsId: 'MY_SECRET', variable: 'API_KEY')
                 ]) {
-                    sh '''
+                    bat '''
                         docker build \
                           --build-arg API_KEY=$API_KEY \
                           -t secrets-demo:secure .
