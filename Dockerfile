@@ -1,6 +1,6 @@
 FROM alpine
 ARG API_KEY
 WORKDIR /app
-COPY .. .
+COPY . .
 RUN chmod +x /script.sh
 CMD ["./script.sh"]

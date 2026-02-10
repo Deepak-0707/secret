@@ -9,7 +9,7 @@ pipeline {
                 ]) {
                     bat '''
                         docker build \
-                          --build-arg API_KEY=$API_KEY \
+                          --build-arg API_KEY=%API_KEY% \
                           -t secrets-demo:secure .
                     '''
                 }
